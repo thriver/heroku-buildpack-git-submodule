@@ -13,13 +13,13 @@ This buildpack takes a different approach and makes using the native Git way of 
 
 1. Add the buildpack to your Heroku app:
 
-        heroku buildpacks:add https://github.com/SectorLabs/heroku-buildpack-git-submodule.git
+        heroku buildpacks:add https://github.com/thriver/heroku-buildpack-git-submodule
         
     Keep in mind that the buildpack order is important. If you'll specify this buildpack after your default one (e.g. `heroku/nodejs`) it'll not work. See [https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app](https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app) for details.
 
 2. Set the `GIT_REPO_URL` to the SSH URL of your Git repo:
 
-        heroku config:set GIT_REPO_URL=git@github.com:SectorLabs/myrepo
+        heroku config:set GIT_REPO_URL=git@github.com:thriver/heroku-buildpack-git-submodule
 
 3. Set `GIT_SSH_KEY` to the private SSH key that can access both your repo and its submodules:
 
